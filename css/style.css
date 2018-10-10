@@ -358,7 +358,7 @@ article.login fieldset input[type="submit"]::-ms-input-placeholder {
   color: #ccc;
 }
 body.manager {
-  background: url("../images/bg-aside.png") repeat-y left top;
+  background: url("../images/bg-aside2.jpg") repeat-y left top;
 }
 body.manager header#header {
   background: url("../images/header3.jpg") no-repeat #e7ebf4 right center / auto 100%;
@@ -401,7 +401,7 @@ body.manager header#header button.logout {
 }
 body.manager aside.menu {
   display: inline-block;
-  width: 199px;
+  width: 218px;
   float: left;
 }
 body.manager aside.menu nav {
@@ -521,10 +521,10 @@ body.manager footer#footer {
 body.manager article.sub,
 body.sub article.sub {
   display: inline-block;
-  float: left;
+  float: right;
   min-height: 800px;
-  width: calc(100% - 199px);
-  padding: 30px;
+  width: calc(100% - 218px);
+  padding: 30px 20px;
 }
 body.manager article.sub div.tabs,
 body.sub article.sub div.tabs {
