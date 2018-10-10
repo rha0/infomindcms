@@ -1,0 +1,711 @@
+/* +++ 공통 +++ */
+@import "fontello.css";
+body,
+button,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+ol,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  *word-break: break-all;
+  -ms-word-break: break-all;
+}
+fieldset,
+iframe,
+img {
+  border: 0 none;
+}
+li {
+  list-style: none;
+}
+button,
+input,
+select {
+  vertical-align: middle;
+}
+img {
+  vertical-align: top;
+}
+address,
+em,
+i {
+  font-style: normal;
+}
+button,
+label {
+  cursor: pointer;
+}
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+button * {
+  position: relative;
+}
+button img {
+  left: -3px;
+  *left: auto;
+}
+html:first-child select {
+  height: 20px;
+  padding-right: 6px;
+}
+option {
+  padding-right: 6px;
+}
+hr {
+  display: none;
+}
+legend {
+  *width: 0;
+}
+table {
+  /* border-collapse:collapse;table-layout:fixed; */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* fonts */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NanumGothic-Bold.eot");
+  src: url("../font/NanumGothic-Bold.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-Bold.woff") format('woff'), url("../font/NanumGothic-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NanumGothic-Regular.eot");
+  src: url("../font/NanumGothic-Regular.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-Regular.woff") format('woff'), url("../font/NanumGothic-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/NanumGothic-Light.eot");
+  src: url("../font/NanumGothic-Light.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-Light.woff") format('woff'), url("../font/NanumGothic-Light.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../font/NanumGothic-ExtraBold.eot");
+  src: url("../font/NanumGothic-ExtraBold.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-ExtraBold.woff") format('woff'), url("../font/NanumGothic-ExtraBold.ttf") format('truetype');
+}
+/* basic */
+/* gray */
+/* blue */
+/* etc color */
+/* mixin */
+.bold {
+  font-weight: 800;
+}
+.normal {
+  font-weight: 400;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.top {
+  vertical-align: top;
+}
+.middle {
+  vertical-align: middle;
+}
+.bottom {
+  vertical-align: bottom;
+}
+.hidden {
+  overflow: hidden;
+}
+.none {
+  display: none;
+}
+.no-list {
+  list-style: none;
+}
+.mapazero {
+  margin: 0;
+  padding: 0;
+}
+.zero {
+  font-size: 0;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
+.static {
+  position: static;
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-item: center;
+  -webkit-justify-content: center;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+.full-position {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.pointer {
+  cursor: pointer;
+}
+.pagenation {
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+  margin: 2.14285714rem 0 3.57142857rem;
+  width: 100%;
+}
+.pagenation a {
+  background: #fff;
+}
+.pagenation a,
+.pagenation strong {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.14285714rem;
+  border: 1px solid #eee;
+  width: 1.85714286rem;
+  height: 2.57142857rem;
+  line-height: 2.57142857rem;
+  margin: 0 0.07142857rem;
+}
+@media all and (min-width: 1200px) {
+  .pagenation a,
+  .pagenation strong {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 2px;
+  }
+}
+.pagenation a.jump,
+.pagenation strong.jump,
+.pagenation a.move,
+.pagenation strong.move {
+  font-size: 0;
+  background: #f7f7f7;
+}
+.pagenation a.jump i,
+.pagenation strong.jump i,
+.pagenation a.move i,
+.pagenation strong.move i {
+  font-size: 1.14285714rem;
+  line-height: inherit;
+  font-style: normal;
+}
+.pagenation .active,
+.pagenation strong {
+  background: #0055b5;
+  color: #fff;
+  font-weight: 400;
+  border-color: transparent;
+}
+.freez {
+  height: 100vh;
+  overflow: hidden;
+}
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@keyframes fade {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+@keyframes heights {
+  to {
+    height: auto;
+  }
+}
+/* header */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+/*font*/
+html {
+  min-width: 1000px;
+  font-size: 14px;
+}
+body {
+  font-family: "Malgun Gothic", "apple sd gothic neo", "Nanum Gothic", sans-serif;
+  color: #222222;
+}
+.sr-only {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+/* layout style */
+article.login {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("../images/info-bg3.jpg") no-repeat center / cover;
+}
+article.login fieldset {
+  border: none;
+}
+article.login fieldset h2 {
+  display: block;
+  width: 346px;
+  height: 190px;
+  margin: 200px auto 44px;
+  background: url("../images/logo2.png") no-repeat center / 100% 100%;
+  color: transparent;
+  font-size: 0;
+}
+article.login fieldset input {
+  display: block;
+  width: 396px;
+  height: 56px;
+  padding: 0 20px;
+  border: 1px solid #eee;
+  border-left: none;
+  border-top: none;
+  margin: 0 auto 20px;
+}
+article.login fieldset input[type="submit"] {
+  background: url("../images/btn-login.png") no-repeat center / 100% 100%;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+}
+article.login fieldset input[type="submit"]::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+article.login fieldset input[type="submit"]:-moz-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+article.login fieldset input[type="submit"]::-ms-input-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+body.manager {
+  background: url("../images/bg-aside.png") repeat-y left top;
+}
+body.manager header#header {
+  background: url("../images/header3.jpg") no-repeat #e7ebf4 right center / auto 100%;
+  height: 65px;
+  line-height: 65px;
+}
+body.manager header#header h1 {
+  display: inline-block;
+  margin: 0 40px 0 20px;
+  width: auto;
+  height: 100%;
+  font-size: 0;
+  background: url("../images/logo3.png") no-repeat left center / 140px 44px;
+}
+body.manager header#header h1 small {
+  font-size: 24px;
+  color: #333;
+  margin-left: 160px;
+}
+body.manager header#header p.attention {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  color: #333;
+}
+body.manager header#header p.attention strong {
+  color: #222;
+}
+body.manager header#header button.logout {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  width: 125px;
+  height: 35px;
+  background: url("../images/logout2.png") no-repeat center / 100%;
+  color: transparent;
+  border: none;
+}
+body.manager aside.menu {
+  display: inline-block;
+  width: 199px;
+  float: left;
+}
+body.manager aside.menu nav {
+  padding: 20px 0;
+}
+body.manager aside.menu nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: url("../images/dotLine.gif") repeat-y 14px 0px;
+}
+body.manager aside.menu nav ul li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body.manager aside.menu nav ul li.active > a {
+  font-weight: 800;
+  color: #0055b5;
+}
+body.manager aside.menu nav ul li.depth1 {
+  background: url("../images/plus.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1.active {
+  background: url("../images/minus.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1:first-child {
+  background: url("../images/plus-first.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1:first-child.active {
+  background: url("../images/minus-first.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1:last-child {
+  background: url("../images/plus-last.gif") no-repeat 7px -4px #fff;
+}
+body.manager aside.menu nav ul li.depth1:last-child.active {
+  background: url("../images/minus.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1:last-child .depth2 {
+  background: url("../images/plus2-last.gif") no-repeat 7px 0px;
+}
+body.manager aside.menu nav ul li.depth1:last-child .depth2.active {
+  background: url("../images/minus2-last.gif") no-repeat 7px 0px;
+}
+body.manager aside.menu nav ul li.depth1:last-child .depth2 .depth3 {
+  background-color: #fff;
+}
+body.manager aside.menu nav ul li.depth1:last-child .depth2 .depth3.active {
+  background-color: #fff;
+}
+body.manager aside.menu nav ul li.depth1:last-child .depth2 .depth3:last-child {
+  background-color: #fff;
+}
+body.manager aside.menu nav ul li.depth1:last-child .depth2 .depth3:last-child.active {
+  background-color: #fff;
+}
+body.manager aside.menu nav ul li.depth1 > a {
+  padding: 0 0 0 26px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+}
+body.manager aside.menu nav ul li.depth1 > ul {
+  display: none;
+}
+body.manager aside.menu nav ul li.depth1 > ul.active {
+  display: block;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 {
+  background: url("../images/plus2.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2.active {
+  background: url("../images/minus2.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2.nodepth {
+  background: url("../images/plus2.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2.nodepth.active {
+  background: url("../images/minus2-nodepth.gif") no-repeat 7px -4px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > a {
+  padding: 0 0 0 37px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 13px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul {
+  display: none;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul.active {
+  display: block;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul li.depth3 {
+  background: url("../images/plus0.gif") no-repeat 7px -2px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul li.depth3.active {
+  background: url("../images/minus0.gif") no-repeat 7px -2px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul li.depth3:last-child {
+  background: url("../images/plus0-last.gif") no-repeat 7px -2px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul li.depth3:last-child.active {
+  background: url("../images/minus0-last.gif") no-repeat 7px -2px;
+}
+body.manager aside.menu nav ul li.depth1 > ul li.depth2 > ul li.depth3 > a {
+  padding: 0 0 0 48px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 13px;
+}
+body.manager footer#footer {
+  display: inline-block;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 30px 20px;
+}
+body.manager article.sub,
+body.sub article.sub {
+  display: inline-block;
+  float: left;
+  min-height: 800px;
+  width: calc(100% - 199px);
+  padding: 30px;
+}
+body.manager article.sub div.tabs,
+body.sub article.sub div.tabs {
+  font-size: 0;
+  position: relative;
+  margin: 0 20px;
+  height: 43px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+body.manager article.sub div.tabs:before,
+body.sub article.sub div.tabs:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 8;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+}
+body.manager article.sub div.tabs input,
+body.sub article.sub div.tabs input {
+  display: none;
+}
+body.manager article.sub div.tabs label,
+body.sub article.sub div.tabs label {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  font-size: 14px;
+  color: #555;
+  background: #eee;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 30px 10px 10px;
+  margin: 4px 1px 0 0;
+  width: 140px;
+  border-top: 4px solid #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body.manager article.sub div.tabs button,
+body.sub article.sub div.tabs button {
+  font-size: 0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  right: 4px;
+  top: 4px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #555;
+}
+body.manager article.sub div.tabs button i,
+body.sub article.sub div.tabs button i {
+  font-size: 16px;
+}
+body.manager article.sub div.tabs input:checked + label,
+body.sub article.sub div.tabs input:checked + label {
+  background: #fff;
+  color: #333;
+  border-color: #002e73;
+  padding: 10px 30px 14px 10px;
+  margin: 0 1px 0 0;
+}
+body.manager article.sub div.tabs input:checked + label button,
+body.sub article.sub div.tabs input:checked + label button {
+  color: #999;
+}
+body.manager article.sub div.tabs > button,
+body.sub article.sub div.tabs > button {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  background: #666;
+  border-radius: 10px;
+}
+body.manager article.sub div.tabs > button.prev,
+body.sub article.sub div.tabs > button.prev {
+  right: 42px;
+}
+body.manager article.sub div.tabs > button i,
+body.sub article.sub div.tabs > button i {
+  font-size: 24px;
+  color: #333;
+  line-height: inherit;
+}
+body.manager article.sub div.tabs > button.on,
+body.sub article.sub div.tabs > button.on {
+  background: #eee;
+  cursor: pointer;
+}
+body.manager article.sub div.view,
+body.sub article.sub div.view {
+  background: #fff;
+  min-height: 300px;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 0 10px 10px 10px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+body.manager article.sub div.view h2.stitle,
+body.sub article.sub div.view h2.stitle {
+  font-size: 28px;
+  color: #333;
+}
+body.manager article.sub div.view h2.stitle i,
+body.sub article.sub div.view h2.stitle i {
+  font-size: 40px;
+  margin: 0 10px 0 0;
+  color: #ddd;
+  vertical-align: top;
+}
+body.manager article.sub div.stitle,
+body.sub article.sub div.stitle {
+  position: relative;
+  margin-bottom: 40px;
+}
+body.manager article.sub div.stitle h2,
+body.sub article.sub div.stitle h2 {
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+}
+body.manager article.sub div.stitle div.btn-set,
+body.sub article.sub div.stitle div.btn-set {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+body.manager article.sub div.stitle div.btn-set a,
+body.sub article.sub div.stitle div.btn-set a {
+  display: inline-block;
+  width: 100%;
+  width: 110px;
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  background: #ccc;
+  color: #4a4a4a;
+}
+body.manager article.sub div.stitle div.btn-set a i,
+body.sub article.sub div.stitle div.btn-set a i {
+  margin-right: 4px;
+}
+body.manager article.sub div.stitle div.btn-set a.main,
+body.sub article.sub div.stitle div.btn-set a.main {
+  background: #0055b5;
+  color: #fff;
+}
+body.manager article.sub div.stitle div.btn-set a.sub,
+body.sub article.sub div.stitle div.btn-set a.sub {
+  background: #4a4a4a;
+  color: #fff;
+}
+/* CHS 추가 */
+body.manager article.sub div.stitle,
+body.sub article.sub div.stitle {
+  position: relative;
+  margin-bottom: 25px;
+}
+hr.hr {
+  display: block;
+  border-width: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+article.login fieldset input[type="button"] {
+  background: url("../images/login2.png") no-repeat center / 100% 100%;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+}
