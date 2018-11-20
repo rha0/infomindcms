@@ -510,6 +510,8 @@ article.login {
 }
 
 body.manager {
+  .relative;
+  // overflow: hidden;
   background: url("../images/bg-aside.png") repeat-y left top;
 
   header#header {
@@ -557,16 +559,18 @@ body.manager {
   }
 
   aside.menu {
-    .inline-block;
+  .inline-block;
     width: 190px;
-    height:auto;
+    height: 800px;
     float: left;
     overflow-y: scroll;
-    overflow-x: hidden;
+      overflow-x: hidden;
+    
     
 
     nav {
       padding: 20px 0; 
+      
       
 
       ul {
