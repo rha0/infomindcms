@@ -558,19 +558,24 @@ body.manager {
 
   aside.menu {
     .inline-block;
-    width: 199px;
+    width: 190px;
+    height: 800px;
     float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
 
     nav {
       padding: 20px 0; 
+      
 
       ul {
         .mapazero;
         .no-list;
-
         background: url("../images/dotLine.gif") repeat-y 14px 0px;
+
         li {
-          .ellipse;
+          // .ellipse;
           &.active {
             &>a {
               .bold;
@@ -726,7 +731,7 @@ body.sub {
     .inline-block;
     float: right;
     min-height: 800px;
-    width: calc(~"100% - 199px");
+    width: calc(~"100% - 200px");
     // padding: 30px 20px;
     padding: 12px;
 
