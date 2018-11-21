@@ -403,8 +403,10 @@ body.manager header#header button.logout {
 body.manager aside.menu {
   display: inline-block;
   width: 190px;
-  height: 800px;
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  bottom: 78px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -520,9 +522,9 @@ body.manager footer#footer {
 body.manager article.sub,
 body.sub article.sub {
   display: inline-block;
-  float: right;
   min-height: 800px;
   width: calc(100% - 200px);
+  margin-left: 200px;
   padding: 12px;
 }
 body.manager article.sub div.tabs,

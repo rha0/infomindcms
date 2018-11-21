@@ -561,10 +561,12 @@ body.manager {
   aside.menu {
   .inline-block;
     width: 190px;
-    height: 800px;
-    float: left;
+    .absolute;
+    left:0;
+    top:65px;
+    bottom:78px;
     overflow-y: scroll;
-      overflow-x: hidden;
+    overflow-x: hidden;
     
     
 
@@ -579,7 +581,6 @@ body.manager {
         background: url("../images/dotLine.gif") repeat-y 14px 0px;
 
         li {
-          // .ellipse;
           &.active {
             &>a {
               .bold;
@@ -733,9 +734,9 @@ body.manager,
 body.sub {
   article.sub {
     .inline-block;
-    float: right;
     min-height: 800px;
     width: calc(~"100% - 200px");
+    margin-left:200px;
     // padding: 30px 20px;
     padding: 12px;
 
