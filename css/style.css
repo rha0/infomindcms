@@ -627,7 +627,7 @@ body.sub article.sub div.tabs > button.on {
 body.manager article.sub div.view,
 body.sub article.sub div.view {
   background: #fff;
-  min-height: 300px;
+  padding: 30px;
   border-radius: 0 10px 10px 10px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
@@ -644,6 +644,11 @@ body.sub article.sub div.view h2.stitle i {
   margin: 0 10px 0 0;
   color: #ddd;
   vertical-align: top;
+}
+body.manager article.sub div.view div.area,
+body.sub article.sub div.view div.area {
+  width: 100%;
+  min-height: 300px;
 }
 body.manager article.sub div.stitle,
 body.sub article.sub div.stitle {
