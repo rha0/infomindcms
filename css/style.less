@@ -860,6 +860,19 @@ body.sub {
       div.area {
         width: 100%;
         min-height: 300px;
+
+        .a1 {
+          width: calc(~'(100% - 10px)/3');
+          .inline-block;
+          min-height: 300px;
+        }
+
+        .a2 {
+          width: calc(~'(100% - 10px)/2');
+          .inline-block;
+          min-height: 300px;
+        }
+
       }
   }
 

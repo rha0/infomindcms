@@ -650,6 +650,18 @@ body.sub article.sub div.view div.area {
   width: 100%;
   min-height: 300px;
 }
+body.manager article.sub div.view div.area .a1,
+body.sub article.sub div.view div.area .a1 {
+  width: calc((100% - 10px)/3);
+  display: inline-block;
+  min-height: 300px;
+}
+body.manager article.sub div.view div.area .a2,
+body.sub article.sub div.view div.area .a2 {
+  width: calc((100% - 10px)/2);
+  display: inline-block;
+  min-height: 300px;
+}
 body.manager article.sub div.stitle,
 body.sub article.sub div.stitle {
   position: relative;
