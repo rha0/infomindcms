@@ -362,7 +362,7 @@ body.manager {
   background: url("../images/bg-aside.png") repeat-y left top;
 }
 body.manager header#header {
-  background: url("../images/header3.jpg") no-repeat #e7ebf4 right center / auto 100%;
+  background: url("../images/header.jpg") no-repeat #e7ebf4 right center / auto 100%;
   height: 65px;
   line-height: 65px;
 }
@@ -655,12 +655,14 @@ body.sub article.sub div.view div.area .a1 {
   width: calc((100% - 10px)/3);
   display: inline-block;
   min-height: 300px;
+  background: orange;
 }
 body.manager article.sub div.view div.area .a2,
 body.sub article.sub div.view div.area .a2 {
   width: calc((100% - 10px)/2);
   display: inline-block;
   min-height: 300px;
+  background: olive;
 }
 body.manager article.sub div.stitle,
 body.sub article.sub div.stitle {
@@ -707,6 +709,10 @@ body.sub article.sub div.stitle div.btn-set a.sub {
   color: #fff;
 }
 /* CHS 추가 */
+body.manager article.sub div.stitle div.btn-set a,
+body.sub article.sub div.stitle div.btn-set a {
+  width: 90px;
+}
 body.manager article.sub div.stitle,
 body.sub article.sub div.stitle {
   position: relative;
@@ -723,4 +729,64 @@ article.login fieldset input[type="button"] {
   border: none;
   color: transparent;
   cursor: pointer;
+}
+#tabs.ui-tabs .ui-tabs-nav li {
+  position: relative;
+  padding-right: 15px;
+  border-color: #ccc;
+}
+#tabs.ui-tabs .ui-icon-close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+}
+#tab_scroll {
+  position: absolute;
+  right: 36px;
+  top: 90px;
+  font-size: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 31px;
+  text-align: center;
+  background-color: #CCCCCC;
+}
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  border-width: 0;
+  padding: 0;
+  background: none;
+}
+.sub #content {
+  box-sizing: content-box !important;
+}
+body.manager footer#footer {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: #f7f7f7;
+  padding: 20px 20px;
+}
+/* body.manager article.sub, body.sub article.sub {
+  display: inline-block;
+  min-height: 800px;
+  width: calc(100% - 199px);
+  padding: 12px;
+} */
+.ui-tabs {
+  position: relative;
+  padding: .2em;
+  zoom: 1;
+  height: calc(-46vh);
+}
+#header p.attention i {
+  position: absolute;
+  right: 378px;
+}
+body.manager article.sub,
+body.sub article.sub {
+  padding: 12px;
 }
