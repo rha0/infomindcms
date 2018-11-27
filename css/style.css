@@ -362,7 +362,7 @@ body.manager {
   background: url("../images/bg-aside.png") repeat-y left top;
 }
 body.manager header#header {
-  background: url("../images/header.jpg") no-repeat #e7ebf4 right center / auto 100%;
+  background: url("../images/header4.jpg") no-repeat #fabf30 right center / auto 100%;
   height: 65px;
   line-height: 65px;
 }
@@ -655,14 +655,12 @@ body.sub article.sub div.view div.area .a1 {
   width: calc((100% - 10px)/3);
   display: inline-block;
   min-height: 300px;
-  background: orange;
 }
 body.manager article.sub div.view div.area .a2,
 body.sub article.sub div.view div.area .a2 {
   width: calc((100% - 10px)/2);
   display: inline-block;
   min-height: 300px;
-  background: olive;
 }
 body.manager article.sub div.stitle,
 body.sub article.sub div.stitle {
